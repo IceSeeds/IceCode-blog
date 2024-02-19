@@ -1,0 +1,35 @@
+@function vw( $px, $viewport-width: 1980 ) {
+    @return ( $px / $viewport-width ) * 100vw;
+}
+
+.header{
+    background-color: #333333;
+    color: #EAEAEA;
+
+    width: 100%;
+    height: vw( 80 );
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: vw( 20 );
+
+    .logo{
+        width: vw( 75 );
+        padding: vw( 3 ) vw( 3 );
+        margin-left: vw( 5 );
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .nav{
+        display: flex;
+        margin-right: vw( 100 );
+
+        li{
+            margin: vw( 25 ) vw( 30 );
+        }
+    }
+}
